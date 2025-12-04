@@ -31,3 +31,23 @@ stages:
       hash: md5
       md5: dc3d6151ce512ce1903d0d65df011c44
       size: 944
+  train:
+    cmd: python ./src/train_model.py
+    deps:
+    - path: ./data/processed/test.csv
+      hash: md5
+      md5: f62eb59ab49d79c725d3982a6309f855
+      size: 648
+    - path: ./src/train_model.py
+      hash: md5
+      md5: a6ba1dce747943686d303ac888b7f9df
+      size: 1692
+    outs:
+    - path: ./metrics/metrics.json
+      hash: md5
+      md5: 6e937326d19ba7d42e36c0401d99871a
+      size: 62
+    - path: ./models/iris_logistics_regression.pkl
+      hash: md5
+      md5: a7df2d113488a506c57d59ccfa91870f
+      size: 1327

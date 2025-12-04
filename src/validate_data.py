@@ -21,7 +21,7 @@ def main() -> int:
     df = pd.read_csv(TRAIN_PATH)
     
     #Column check
-    cols = list[Any](df.columns)
+    cols = list[any](df.columns)
     if(cols != EXPECTED_COLUMNS):
         print(f"Error: {TRAIN_PATH} does not contains the expected columns.")
         return 1;
@@ -35,4 +35,7 @@ def main() -> int:
     print(f"[OK] Data validation passed for {TRAIN_PATH}")
     
     return 0;
+
+if __name__ == "__main__":
+    sys.exit(main())
     

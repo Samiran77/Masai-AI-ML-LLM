@@ -29,5 +29,5 @@ stages:
       size: 2358
     - path: ./src/validate_data.py
       hash: md5
-      md5: 6b419c1d6bb322c8752947ab5a3a2e83
-      size: 892
+      md5: dc3d6151ce512ce1903d0d65df011c44
+      size: 944

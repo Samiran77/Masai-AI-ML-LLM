@@ -1,0 +1,14 @@
+stages:
+  prepare:
+    cmd: python ./src/prepare_data.py
+    deps:
+    - ./data/raw/iris.csv
+    - ./src/prepare_data.py
+    outs:
+    - ./data/processed/test.csv
+    - ./data/processed/train.csv
+  validate:
+    cmd: python ./src/validate_data.py
+    deps:
+    - ./data/processed/train.csv
+    - ./src/validate_data.py

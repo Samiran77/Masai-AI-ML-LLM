@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+prometheus-client
+openai==2.9.0
+python-dotenv
+httpx
+numpy
+pandas
+fairlearn
+scikit-learn

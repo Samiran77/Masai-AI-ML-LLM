@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  app:
+    build: ./App
+    ports:
+      - "8000:9090"
+    volumes:
+      - ./App:/app
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    command:
+      - "config=/etc/grafana/grafana.ini"
+      - "--homepath=/usr/share/grafana"
+      - "--packaging=docker"
+    networks:
+      - monitoring
